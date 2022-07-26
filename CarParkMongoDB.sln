@@ -9,6 +9,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarParkAPI", "CarParkAPI\Ca
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{165E3714-5323-4602-81B4-0C44CD0019A7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLayer", "BusinessLayer\BusinessLayer.csproj", "{0B3F4EE5-FDCA-4081-9161-99FA19F92B34}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreLayer", "CoreLayer\CoreLayer.csproj", "{63C3F26C-AF91-4E03-A95E-8F9CF8FDB28F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{165E3714-5323-4602-81B4-0C44CD0019A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{165E3714-5323-4602-81B4-0C44CD0019A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{165E3714-5323-4602-81B4-0C44CD0019A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B3F4EE5-FDCA-4081-9161-99FA19F92B34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B3F4EE5-FDCA-4081-9161-99FA19F92B34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B3F4EE5-FDCA-4081-9161-99FA19F92B34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B3F4EE5-FDCA-4081-9161-99FA19F92B34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63C3F26C-AF91-4E03-A95E-8F9CF8FDB28F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63C3F26C-AF91-4E03-A95E-8F9CF8FDB28F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63C3F26C-AF91-4E03-A95E-8F9CF8FDB28F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63C3F26C-AF91-4E03-A95E-8F9CF8FDB28F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
