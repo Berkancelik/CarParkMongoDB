@@ -22,26 +22,13 @@ namespace CarParkUser.Controllers
 
         public IActionResult Index()
         {
-            var settings = MongoClientSettings.FromConnectionString("mongodb+srv://Berkancelik:Berkan123@carparkcluster.jp1db.mongodb.net/CarParkDB?retryWrites=true&w=majority");
-            var client = new MongoClient(settings);
-            var database = client.GetDatabase("CarParkDB");
-            var collection = database.GetCollection<Test>("Test");
-
-            var test = new Test()
+            var customer = new Customer()
             {
-                _Id = ObjectId.GenerateNewId(),
-                NameSurname = "Berkan Çelik",
-                Age = 28,
-                AddressList = new List<Address>() { new Address
-                {
-                    Title="ev adresi",
-                    Description="istanbul 4. numara "
-                },new Address{
-                Title="İş adresi",
-                Description="Boğaz köprüsü" }
-                }
+                Id = 1,
+                NameSurname = "Berkan Kaya",
+                Age = 24
             };
-            collection.InsertOne(test);
+            _logger.LogError("Customer da bir hata oluştu {@customer}",customer);
 
             return View();
         }

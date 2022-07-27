@@ -1,18 +1,23 @@
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Serilog;
 
 namespace CarParkUser
 {
     public class Program
     {
+     
         public static void Main(string[] args)
         {
+            Log.Logger = new LoggerConfiguration()
+                .WriteTo.Console()
+                .WriteTo.Seq(serverUrl:"http://localhost:5341/")
+                .MinimumLevel.Information()
+                .Enrich.WithProperty("ApplicationName","CarPark.User")
+                .Enrich.WithMachineName()
+                .WriteTo.File("log.txt")
+                .CreateLogger();
+
             CreateHostBuilder(args).Build().Run();
         }
 
@@ -21,6 +26,6 @@ namespace CarParkUser
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
-                });
+                }).UseSerilog();
     }
 }
