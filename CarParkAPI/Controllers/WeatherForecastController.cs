@@ -20,12 +20,14 @@ namespace CarParkAPI.Controllers
 
         public WeatherForecastController(ILogger<WeatherForecastController> logger)
         {
+
             _logger = logger;
         }
 
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
+            _logger.LogInformation("Ben api loguyumdur");
             var rng = new Random();
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
