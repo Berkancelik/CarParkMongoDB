@@ -89,3 +89,105 @@
 2022-07-27 22:34:04.575 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/lib/bootstrap/dist/js/bootstrap.bundle.min.js - - - 304 - application/javascript 29.1151ms
 2022-07-27 22:34:04.620 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_vs/browserLink - -
 2022-07-27 22:34:04.659 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 39.9070ms
+2022-07-28 22:54:54.635 +03:00 [INF] User profile is available. Using 'C:\Users\berka\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-07-28 22:54:55.326 +03:00 [INF] Now listening on: https://localhost:5001
+2022-07-28 22:54:55.328 +03:00 [INF] Now listening on: http://localhost:5000
+2022-07-28 22:54:55.330 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-28 22:54:55.331 +03:00 [INF] Hosting environment: Development
+2022-07-28 22:54:55.332 +03:00 [INF] Content root path: C:\Users\berka\source\repos\CarParkMongoDB\CarParkUser
+2022-07-28 22:54:55.923 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/ - -
+2022-07-28 22:54:55.995 +03:00 [INF] Executing endpoint 'CarParkUser.Controllers.HomeController.Index (CarParkUser)'
+2022-07-28 22:54:56.042 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller CarParkUser.Controllers.HomeController (CarParkUser).
+2022-07-28 22:54:56.052 +03:00 [INF] Executed action CarParkUser.Controllers.HomeController.Index (CarParkUser) in 2.8226ms
+2022-07-28 22:54:56.055 +03:00 [INF] Executed endpoint 'CarParkUser.Controllers.HomeController.Index (CarParkUser)'
+2022-07-28 22:54:56.060 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.Extensions.Localization.IStringLocalizer`1[CarParkUser.Controllers.HomeController]' while attempting to activate 'CarParkUser.Controllers.HomeController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method2(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-07-28 22:54:56.388 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/ - - - 500 - text/html;+charset=utf-8 469.0998ms
+2022-07-28 22:54:56.416 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_vs/browserLink - -
+2022-07-28 22:54:56.416 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - -
+2022-07-28 22:54:56.424 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - - - 200 11992 application/javascript;+charset=utf-8 8.0159ms
+2022-07-28 22:54:56.444 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 28.0941ms
+2022-07-28 22:55:09.580 +03:00 [INF] User profile is available. Using 'C:\Users\berka\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-07-28 22:55:10.144 +03:00 [INF] Now listening on: https://localhost:5001
+2022-07-28 22:55:10.147 +03:00 [INF] Now listening on: http://localhost:5000
+2022-07-28 22:55:10.149 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-28 22:55:10.151 +03:00 [INF] Hosting environment: Development
+2022-07-28 22:55:10.152 +03:00 [INF] Content root path: C:\Users\berka\source\repos\CarParkMongoDB\CarParkUser
+2022-07-28 22:55:10.808 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/ - -
+2022-07-28 22:55:10.854 +03:00 [INF] Executing endpoint 'CarParkUser.Controllers.HomeController.Index (CarParkUser)'
+2022-07-28 22:55:10.897 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller CarParkUser.Controllers.HomeController (CarParkUser).
+2022-07-28 22:55:10.905 +03:00 [INF] Executed action CarParkUser.Controllers.HomeController.Index (CarParkUser) in 2.2252ms
+2022-07-28 22:55:10.910 +03:00 [INF] Executed endpoint 'CarParkUser.Controllers.HomeController.Index (CarParkUser)'
+2022-07-28 22:55:10.914 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.Extensions.Localization.IStringLocalizer`1[CarParkUser.Controllers.HomeController]' while attempting to activate 'CarParkUser.Controllers.HomeController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method2(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-07-28 22:55:11.077 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/ - - - 500 - text/html;+charset=utf-8 271.3581ms
+2022-07-28 22:55:11.106 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - -
+2022-07-28 22:55:11.106 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_vs/browserLink - -
+2022-07-28 22:55:11.111 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - - - 200 11992 application/javascript;+charset=utf-8 5.4613ms
+2022-07-28 22:55:11.134 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 27.7343ms
+2022-07-28 22:55:45.131 +03:00 [INF] User profile is available. Using 'C:\Users\berka\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-07-28 22:55:45.605 +03:00 [INF] Now listening on: https://localhost:5001
+2022-07-28 22:55:45.607 +03:00 [INF] Now listening on: http://localhost:5000
+2022-07-28 22:55:45.608 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-28 22:55:45.609 +03:00 [INF] Hosting environment: Development
+2022-07-28 22:55:45.610 +03:00 [INF] Content root path: C:\Users\berka\source\repos\CarParkMongoDB\CarParkUser
+2022-07-28 22:55:46.350 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/ - -
+2022-07-28 22:55:46.409 +03:00 [INF] Executing endpoint 'CarParkUser.Controllers.HomeController.Index (CarParkUser)'
+2022-07-28 22:55:46.461 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller CarParkUser.Controllers.HomeController (CarParkUser).
+2022-07-28 22:55:46.479 +03:00 [INF] Executed action CarParkUser.Controllers.HomeController.Index (CarParkUser) in 4.899ms
+2022-07-28 22:55:46.483 +03:00 [INF] Executed endpoint 'CarParkUser.Controllers.HomeController.Index (CarParkUser)'
+2022-07-28 22:55:46.489 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.Extensions.Localization.IStringLocalizer`1[CarParkUser.Controllers.HomeController]' while attempting to activate 'CarParkUser.Controllers.HomeController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method2(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-07-28 22:55:46.648 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/ - - - 500 - text/html;+charset=utf-8 302.2483ms
+2022-07-28 22:55:46.678 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - -
+2022-07-28 22:55:46.678 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_vs/browserLink - -
+2022-07-28 22:55:46.685 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - - - 200 11992 application/javascript;+charset=utf-8 6.9211ms
+2022-07-28 22:55:46.714 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 36.0602ms
