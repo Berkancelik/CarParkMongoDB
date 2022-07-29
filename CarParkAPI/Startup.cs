@@ -32,33 +32,7 @@ namespace CarParkAPI
 
             services.AddControllers();
 
-            services.AddLocalization();
-
-            services.AddLocalization(opts =>
-            {
-                opts.ResourcesPath = "Resources";
-            });
-
-            services.Configure<RequestLocalizationOptions>(opts =>
-            {
-                var supportedCultures = new List<CultureInfo>
-                {
-                    new CultureInfo("en-US"),
-                    new CultureInfo("tr-TR"),
-                    new CultureInfo("ar-SA")
-                };
-                opts.DefaultRequestCulture = new RequestCulture("tr-TR");
-                opts.SupportedCultures = supportedCultures;
-                opts.SupportedUICultures = supportedCultures;
-
-                opts.RequestCultureProviders = new List<IRequestCultureProvider>
-                {
-                    new QueryStringRequestCultureProvider(),
-                    new CookieRequestCultureProvider(),
-                    new AcceptLanguageHeaderRequestCultureProvider(),
-                };
-
-            });
+           
 
 
 
@@ -87,9 +61,7 @@ namespace CarParkAPI
             app.UseRouting();
 
             app.UseAuthorization();
-            var options = app.ApplicationServices.GetService<IOptions<RequestLocalizationOptions>>();
-            app.UseRequestLocalization(options.Value);
-
+       
             app.UseEndpoints(endpoints =>
                         {
                             endpoints.MapControllers();

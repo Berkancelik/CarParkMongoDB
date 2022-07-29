@@ -2,15 +2,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Logging;
-using MongoDB.Bson;
-using MongoDB.Driver;
-using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.Globalization;
-using System.Linq;
 using System.Threading;
-using System.Threading.Tasks;
 
 namespace CarParkUser.Controllers
 {
@@ -29,11 +23,12 @@ namespace CarParkUser.Controllers
 
         public IActionResult Index()
         {
-            var say_hello_value = _localizer["Say_Hello"];
 
             var cultureInfo = CultureInfo.GetCultureInfo("en-US");
             Thread.CurrentThread.CurrentCulture = cultureInfo;
             Thread.CurrentThread.CurrentUICulture = cultureInfo;
+            var say_hello_value2 = _localizer["Say_Hello"];
+
             var customer = new Customer()
             {
                 Id = 1,
