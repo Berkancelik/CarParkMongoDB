@@ -13,5 +13,6 @@ namespace EntityLayer.Concrete
         [BsonId]
         public ObjectId Id { get; set; }
         public ICollection<Translation> Translation { get; set; }
+        public ICollection<WorkingHour> WorkingHours { get; set; }
     }
 }
