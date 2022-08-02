@@ -19,6 +19,7 @@ namespace EntityLayer.Concrete
         public string WebSite { get; set; }
         public string[] EmailAdresses { get; set; }
         public ICollection<WorkingDay> WorkingDays { get; set; }
+        public ICollection<FloorInformation> FloorInformations { get; set; }
 
     }
 }
