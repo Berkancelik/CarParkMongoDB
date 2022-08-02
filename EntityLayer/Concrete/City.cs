@@ -15,7 +15,6 @@ namespace EntityLayer.Concrete
         public string Plate { get; set; }
         public string Latitude { get; set; }
         public string Longitude { get; set; }
-        public string Logitude { get; set; }
         public ICollection<County> Counties { get; set; }
     }
 }

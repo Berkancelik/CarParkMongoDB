@@ -11,6 +11,9 @@ namespace EntityLayer.Concrete
     public class Reservation
     {
 
+      
+
+
         public string Image { get; set; }
         public string  Plate { get; set; }
         public DateTime BeginDate { get; set; }

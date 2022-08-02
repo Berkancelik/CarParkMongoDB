@@ -1,7 +1,12 @@
 ﻿using CarParkUser.Models;
+using EntityLayer.Concrete;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Logging;
+using MongoDB.Bson;
+using MongoDB.Driver;
+using Newtonsoft.Json;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Globalization;
 using System.Threading;
@@ -10,32 +15,58 @@ namespace CarParkUser.Controllers
 {
     public class HomeController : Controller
     {
+
+
+        //var settings = MongoClient("mongodb+srv://Berkancelik:<password>@cluster0.fkzprct.mongodb.net/?retryWrites=true&w=majority");
+
+
+
         private readonly ILogger<HomeController> _logger;
         private readonly IStringLocalizer<HomeController> _localizer;
+        private readonly MongoClient client;
 
-        public HomeController(ILogger<HomeController> logger, IStringLocalizer<HomeController> localizer)
+        public HomeController(ILogger<HomeController> logger, IStringLocalizer<HomeController> localizer, MongoClient client)
         {
-
-
             _logger = logger;
             _localizer = localizer;
+            client = new MongoClient("mongodb+srv://Berkancelik:Berkan123@cluster0.fkzprct.mongodb.net/?retryWrites=true&w=majority");
         }
 
         public IActionResult Index()
         {
+            var database = client.GetDatabase("CarParkDB");
 
-            var cultureInfo = CultureInfo.GetCultureInfo("en-US");
-            Thread.CurrentThread.CurrentCulture = cultureInfo;
-            Thread.CurrentThread.CurrentUICulture = cultureInfo;
-            var say_hello_value2 = _localizer["Say_Hello"];
+            var jsonString = System.IO.File.ReadAllText("cities.json");
 
-            var customer = new Customer()
+            var cities = JsonConvert.DeserializeObject<List<cities>>(jsonString);
+
+            var citiesCollection = database.GetCollection<City>("City");
+            foreach (var item in cities)
             {
-                Id = 1,
-                NameSurname = "Berkan Kaya",
-                Age = 24
-            };
-            _logger.LogError("Customer da bir hata oluştu {@customer}",customer);
+                var city = new City()
+                {
+                    Id = ObjectId.GenerateNewId(),
+                    Name = item.name,
+                    Plate = item.plate,
+                    Latitude = item.latitude,
+                    Longitude = item.longtude,
+                    Counties = new List<County>()
+                };
+                foreach (var item2 in item.counties)
+                {
+                    city.Counties.Add(new County
+                    {
+                        Id = ObjectId.GenerateNewId(),
+                        Name = item2,
+                        Latitude = "",
+                        Longitude = "",
+                        PostCode= ""
+
+                    });
+                }
+                citiesCollection.InsertOne(city);
+            }
+
 
             return View();
         }
