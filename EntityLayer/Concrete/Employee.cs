@@ -19,6 +19,9 @@ namespace EntityLayer.Concrete
         public string[] Roles { get; set; }
         public EmployeeContact EmployeeContact { get; set; }
         public ICollection<Address> Addresses { get; set; }
+        public short Status { get; set; }
+        public DateTime CreatedDate { get; set; }
+        public DateTime? UpdateDate { get; set; }
 
 
     }
