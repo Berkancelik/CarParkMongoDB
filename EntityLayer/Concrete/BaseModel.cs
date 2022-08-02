@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace EntityLayer.Concrete
 {
-    public class SlotInformaiton:BaseModel
+    public class BaseModel
     {
-      
-        public ICollection<Translation> Translation { get; set; }
+        [BsonId]
+        public ObjectId Id { get; set; }
     }
 }

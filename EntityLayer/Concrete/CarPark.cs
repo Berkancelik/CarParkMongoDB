@@ -8,10 +8,9 @@ using System.Threading.Tasks;
 
 namespace EntityLayer.Concrete
 {
-    public class CarPark
+    public class CarPark:BaseModel
     {
-        [BsonId]
-        public ObjectId Id{ get; set; }
+    
         public string Name { get; set; }
         public string[] PhoneNumbers { get; set; }
         public Address Address { get; set; }

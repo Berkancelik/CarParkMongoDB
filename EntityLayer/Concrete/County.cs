@@ -8,10 +8,9 @@ using System.Threading.Tasks;
 
 namespace EntityLayer.Concrete
 {
-    public class County
+    public class County:BaseModel
     {
-        [BsonId]
-        public ObjectId Id { get; set; }
+ 
         public string Name { get; set; }
         public string Latitude { get; set; }
         public string Longitude { get; set; }

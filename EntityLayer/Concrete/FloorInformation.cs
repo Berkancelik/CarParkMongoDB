@@ -8,10 +8,9 @@ using System.Threading.Tasks;
 
 namespace EntityLayer.Concrete
 {
-    public class FloorInformation
+    public class FloorInformation:BaseModel
     {
-        [BsonId]
-        public ObjectId  Id { get; set; }
+     
         public int Number { get; set; }
         public ICollection<SlotInformaiton> SlotInformaitons { get; set; }
 
