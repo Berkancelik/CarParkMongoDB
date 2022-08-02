@@ -18,6 +18,7 @@ namespace EntityLayer.Concrete
         public string Password { get; set; }
         public string[] Roles { get; set; }
         public EmployeeContact EmployeeContact { get; set; }
+        public ICollection<Address> Addresses { get; set; }
 
 
     }
