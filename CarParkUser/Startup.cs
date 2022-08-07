@@ -1,5 +1,6 @@
 using CarParkUser.Resources;
 using CoreLayer.Repository.Abstract;
+using CoreLayer.Settings;
 using DataAccessLayer.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -41,7 +42,11 @@ namespace CarParkUser
                         return factory.Create(nameof(SharedModelsResource), assamblyName.Name);
                     };
                 });
-
+            services.Configure<MongoSettings>(options =>
+            {
+                options.ConnectionStrings = Configuration.GetSection("MongoConnection:ConnectionString").Value;
+                options.Database = Configuration.GetSection("MongoConnection:Database").Value;
+            });
 
             services.AddScoped(typeof(IRepository<>), typeof(MongoRepositoryBase<>));
 
