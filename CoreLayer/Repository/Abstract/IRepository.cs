@@ -10,7 +10,7 @@ namespace CoreLayer.Repository.Abstract
 {
     public interface IRepository<TEntity> where TEntity : class, new()
     {
-        GetManyResult<TEntity> ASQueryable();
+        GetManyResult<TEntity> AsQueryable();
         Task<GetManyResult<TEntity>> ASQueryableAsync();
         GetManyResult<TEntity> FilterBy(Expression<Func<TEntity, bool>> filter);
         Task<GetManyResult<TEntity>> FilterByAsync(Expression<Func<TEntity, bool>> filter);

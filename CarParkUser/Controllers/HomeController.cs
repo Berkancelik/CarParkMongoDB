@@ -31,43 +31,43 @@ namespace CarParkUser.Controllers
         {
             _logger = logger;
             _localizer = localizer;
-            client = new MongoClient("mongodb+srv://Berkancelik:Carpark123@carparkdb.uorzkvy.mongodb.net/?retryWrites=true&w=majority");
+            //client = new MongoClient("mongodb+srv://Berkancelik:Carpark123@carparkdb.uorzkvy.mongodb.net/?retryWrites=true&w=majority");
         }
 
         public IActionResult Index()
         {
-            var database = client.GetDatabase("CarParkDB");
+            //var database = client.GetDatabase("CarParkDB");
 
-            var jsonString = System.IO.File.ReadAllText("cities.json");
+            //var jsonString = System.IO.File.ReadAllText("cities.json");
 
-            var cities = JsonConvert.DeserializeObject<List<cities>>(jsonString);
+            //var cities = JsonConvert.DeserializeObject<List<cities>>(jsonString);
 
-            var citiesCollection = database.GetCollection<City>("City");
-            foreach (var item in cities)
-            {
-                var city = new City()
-                {
-                    Id = ObjectId.GenerateNewId(),
-                    Name = item.name,
-                    Plate = item.plate,
-                    Latitude = item.latitude,
-                    Longitude = item.longtude,
-                    Counties = new List<County>()
-                };
-                foreach (var item2 in item.counties)
-                {
-                    city.Counties.Add(new County
-                    {
-                        Id = ObjectId.GenerateNewId(),
-                        Name = item2,
-                        Latitude = "",
-                        Longitude = "",
-                        PostCode= ""
+            //var citiesCollection = database.GetCollection<City>("City");
+            //foreach (var item in cities)
+            //{
+            //    var city = new City()
+            //    {
+            //        Id = ObjectId.GenerateNewId(),
+            //        Name = item.name,
+            //        Plate = item.plate,
+            //        Latitude = item.latitude,
+            //        Longitude = item.longtude,
+            //        Counties = new List<County>()
+            //    };
+            //    foreach (var item2 in item.counties)
+            //    {
+            //        city.Counties.Add(new County
+            //        {
+            //            Id = ObjectId.GenerateNewId(),
+            //            Name = item2,
+            //            Latitude = "",
+            //            Longitude = "",
+            //            PostCode= ""
 
-                    });
-                }
-                citiesCollection.InsertOne(city);
-            }
+            //        });
+            //    }
+            //    citiesCollection.InsertOne(city);
+            //}
 
 
             return View();

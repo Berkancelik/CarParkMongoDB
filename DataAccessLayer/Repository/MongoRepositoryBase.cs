@@ -25,7 +25,7 @@ namespace DataAccessLayer.Repository
             _collection = _context.GetCollection<TEntity>();
         }
 
-        public GetManyResult<TEntity> ASQueryable()
+        public GetManyResult<TEntity> AsQueryable()
         {
             var result = new GetManyResult<TEntity>();
             try

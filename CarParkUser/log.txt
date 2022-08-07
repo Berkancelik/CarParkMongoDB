@@ -1091,3 +1091,27 @@ System.InvalidOperationException: Unable to resolve service for type 'MongoDB.Dr
 2022-08-07 14:10:05.332 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 151.4964ms
 2022-08-07 14:10:05.376 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - -
 2022-08-07 14:10:05.378 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - - - 200 11992 application/javascript;+charset=utf-8 2.0903ms
+2022-08-07 19:54:08.841 +03:00 [INF] User profile is available. Using 'C:\Users\berka\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-08-07 19:54:11.013 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-08-07 19:54:11.013 +03:00 [INF] Hosting environment: Development
+2022-08-07 19:54:11.013 +03:00 [INF] Content root path: C:\Users\berka\source\repos\CarParkMongoDB\CarParkUser
+2022-08-07 19:54:11.075 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44396/ - -
+2022-08-07 19:54:11.194 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44396/ - - - 404 - - 122.4549ms
+2022-08-07 19:54:18.654 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44396/user/create - -
+2022-08-07 19:54:18.668 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44396/user/create - - - 404 - - 13.7348ms
+2022-08-07 19:54:33.969 +03:00 [INF] User profile is available. Using 'C:\Users\berka\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-08-07 19:54:34.544 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-08-07 19:54:34.544 +03:00 [INF] Hosting environment: Development
+2022-08-07 19:54:34.544 +03:00 [INF] Content root path: C:\Users\berka\source\repos\CarParkMongoDB\CarParkUser
+2022-08-07 19:54:34.563 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44396/ - -
+2022-08-07 19:54:34.638 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44396/ - - - 404 - - 75.9851ms
+2022-08-07 19:55:00.544 +03:00 [INF] User profile is available. Using 'C:\Users\berka\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-08-07 19:55:01.613 +03:00 [INF] Now listening on: https://localhost:5001
+2022-08-07 19:55:01.614 +03:00 [INF] Now listening on: http://localhost:5000
+2022-08-07 19:55:01.615 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-08-07 19:55:01.616 +03:00 [INF] Hosting environment: Development
+2022-08-07 19:55:01.617 +03:00 [INF] Content root path: C:\Users\berka\source\repos\CarParkMongoDB\CarParkUser
+2022-08-07 19:55:02.730 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/ - -
+2022-08-07 19:55:02.852 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/ - - - 404 0 - 123.5393ms
+2022-08-07 19:55:14.880 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/user/create - -
+2022-08-07 19:55:14.887 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/user/create - - - 404 0 - 6.9615ms
