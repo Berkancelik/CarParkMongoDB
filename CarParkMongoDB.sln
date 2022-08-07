@@ -7,19 +7,24 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarParkUser", "CarParkUser\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarParkAPI", "CarParkAPI\CarParkAPI.csproj", "{DFBF5156-A469-46BF-9FED-C6C8AA503C8B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{165E3714-5323-4602-81B4-0C44CD0019A7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{165E3714-5323-4602-81B4-0C44CD0019A7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLayer", "BusinessLayer\BusinessLayer.csproj", "{0B3F4EE5-FDCA-4081-9161-99FA19F92B34}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessLayer", "BusinessLayer\BusinessLayer.csproj", "{0B3F4EE5-FDCA-4081-9161-99FA19F92B34}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreLayer", "CoreLayer\CoreLayer.csproj", "{63C3F26C-AF91-4E03-A95E-8F9CF8FDB28F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreLayer", "CoreLayer\CoreLayer.csproj", "{63C3F26C-AF91-4E03-A95E-8F9CF8FDB28F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helpers", "Helpers\Helpers.csproj", "{529F7F84-D0F1-474F-AB0B-C74683CF9266}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Helpers", "Helpers\Helpers.csproj", "{529F7F84-D0F1-474F-AB0B-C74683CF9266}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityLayer", "EntityLayer\EntityLayer.csproj", "{F70C436C-CECF-4998-A5C4-99E8161473D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EntityLayer", "EntityLayer\EntityLayer.csproj", "{F70C436C-CECF-4998-A5C4-99E8161473D0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{A0110E16-5E81-43D5-9CB0-B32964443A54}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Models", "Models\Models.csproj", "{A0110E16-5E81-43D5-9CB0-B32964443A54}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarParkTest", "CarParkTest\CarParkTest.csproj", "{69CC6495-3FD3-41C5-9E61-A4896772E0C1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarParkTest", "CarParkTest\CarParkTest.csproj", "{69CC6495-3FD3-41C5-9E61-A4896772E0C1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3EF336A6-2E57-4605-9E1F-216A4B7A7BCB}"
+	ProjectSection(SolutionItems) = preProject
+		Password.txt = Password.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
