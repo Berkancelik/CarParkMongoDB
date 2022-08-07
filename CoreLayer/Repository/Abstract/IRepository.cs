@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -11,5 +12,7 @@ namespace CoreLayer.Repository.Abstract
     {
         GetManyResult<TEntity> ASQueryable();
         Task<GetManyResult<TEntity>> ASQueryableAsync();
+        GetManyResult<TEntity> FilterBy(Expression<Func<TEntity, bool>> filter);
+        Task<GetManyResult<TEntity>> FilterByAsync(Expression<Func<TEntity, bool>> filter);
     }
 }
