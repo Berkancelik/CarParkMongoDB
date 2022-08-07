@@ -18,5 +18,10 @@ namespace CoreLayer.Repository.Abstract
         Task<GetOneResult<TEntity>> GetByIdAsync(string id);
         GetOneResult<TEntity> InsertOne(TEntity entity);
         Task<GetOneResult<TEntity>> InsertOneAsync(TEntity entity);
+        GetManyResult<TEntity> InsertMany(ICollection<TEntity> entities);
+        Task<GetManyResult<TEntity>> InsertManyAsync(ICollection<TEntity> entities);
+        GetOneResult<TEntity> ReplaceOne(TEntity entity, string id);
+        Task<GetOneResult<TEntity>> ReplaceOneAsync(TEntity entity, string id);
+
     }
 }

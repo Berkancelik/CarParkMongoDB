@@ -123,9 +123,9 @@ namespace DataAccessLayer.Repository
                 var data = _collection.Find(filter).FirstOrDefault();
                 if (data != null)
                     result.Entity = data;
-              
-         
-               
+
+
+
             }
             catch (Exception ex)
             {
@@ -161,13 +161,54 @@ namespace DataAccessLayer.Repository
             return result;
         }
 
+     
+
+        public GetManyResult<TEntity> InsertMany(ICollection<TEntity> entities)
+        {
+            var result = new GetManyResult<TEntity>();
+            try
+            {
+                _collection.InsertMany(entities);
+                result.Result = entities;
+
+            }
+            catch (Exception ex)
+            {
+
+                result.Message = $"InsertMany {ex.Message}";
+                result.Success = false;
+                result.Result = null;
+            }
+            return result;
+        }
+
+
+        public async Task<GetManyResult<TEntity>> InsertManyAsync(ICollection<TEntity> entities)
+        {
+            var result =  new GetManyResult<TEntity>();
+            try
+            {
+                await _collection.InsertManyAsync(entities);
+                result.Result = entities;
+
+            }
+            catch (Exception ex)
+            {
+
+                result.Message = $"InsertManyAsync {ex.Message}";
+                result.Success = false;
+                result.Result = null;
+            }
+            return result;
+        }
+
         public GetOneResult<TEntity> InsertOne(TEntity entity)
         {
             var result = new GetOneResult<TEntity>();
             try
             {
                 _collection.InsertOne(entity);
-                result.Entity = entity; 
+                result.Entity = entity;
 
             }
             catch (Exception ex)
@@ -182,10 +223,10 @@ namespace DataAccessLayer.Repository
 
         public async Task<GetOneResult<TEntity>> InsertOneAsync(TEntity entity)
         {
-            var result =  new GetOneResult<TEntity>();
+            var result = new GetOneResult<TEntity>();
             try
             {
-               await _collection.InsertOneAsync(entity);
+                await _collection.InsertOneAsync(entity);
                 result.Entity = entity;
 
             }
@@ -198,6 +239,34 @@ namespace DataAccessLayer.Repository
             }
             return result;
         }
+
+        public GetOneResult<TEntity> ReplaceOne(TEntity entity, string id)
+        {
+            var result = new GetOneResult<TEntity>();
+            try
+            {
+                var objectId = ObjectId.Parse(id);
+                var filter = Builders<TEntity>.Filter.Eq("_id", objectId);
+                var updatedDocument = _collection.ReplaceOne(filter, entity);
+                result.Entity = entity;
+
+
+
+            }
+            catch (Exception ex)
+            {
+
+                result.Message = $"AsQueryable {ex.Message}";
+                result.Success = false;
+                result.Entity = null;
+            }
+            return result;
+        }
+
+        public Task<GetOneResult<TEntity>> ReplaceOneAsync(TEntity entity, string id)
+        {
+            throw new NotImplementedException();
+        }
     }
-    
+
 }
