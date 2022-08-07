@@ -8,6 +8,11 @@ namespace CoreLayer.Models
 {
     public class Result
     {
+        public Result()
+        {
+            Success = true;
+        }
+
         public bool  Success { get; set; }
         public string Message { get; set; }
     }
