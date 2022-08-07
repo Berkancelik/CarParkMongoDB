@@ -16,5 +16,7 @@ namespace CoreLayer.Repository.Abstract
         Task<GetManyResult<TEntity>> FilterByAsync(Expression<Func<TEntity, bool>> filter);
         GetOneResult<TEntity> GetById(string id);
         Task<GetOneResult<TEntity>> GetByIdAsync(string id);
+        GetOneResult<TEntity> InsertOne(TEntity entity);
+        Task<GetOneResult<TEntity>> InsertOneAsync(TEntity entity);
     }
 }

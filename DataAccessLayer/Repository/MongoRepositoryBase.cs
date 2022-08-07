@@ -160,6 +160,44 @@ namespace DataAccessLayer.Repository
             }
             return result;
         }
+
+        public GetOneResult<TEntity> InsertOne(TEntity entity)
+        {
+            var result = new GetOneResult<TEntity>();
+            try
+            {
+                _collection.InsertOne(entity);
+                result.Entity = entity; 
+
+            }
+            catch (Exception ex)
+            {
+
+                result.Message = $"InsertOne {ex.Message}";
+                result.Success = false;
+                result.Entity = null;
+            }
+            return result;
+        }
+
+        public async Task<GetOneResult<TEntity>> InsertOneAsync(TEntity entity)
+        {
+            var result =  new GetOneResult<TEntity>();
+            try
+            {
+               await _collection.InsertOneAsync(entity);
+                result.Entity = entity;
+
+            }
+            catch (Exception ex)
+            {
+
+                result.Message = $"InsertOneAsync {ex.Message}";
+                result.Success = false;
+                result.Entity = null;
+            }
+            return result;
+        }
     }
     
 }
