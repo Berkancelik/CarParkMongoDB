@@ -22,6 +22,20 @@ namespace CoreLayer.Repository.Abstract
         Task<GetManyResult<TEntity>> InsertManyAsync(ICollection<TEntity> entities);
         GetOneResult<TEntity> ReplaceOne(TEntity entity, string id);
         Task<GetOneResult<TEntity>> ReplaceOneAsync(TEntity entity, string id);
+        /// <summary>
+        /// Delete
+        /// </summary>
+        /// <param name="filter"></param>
+        /// <returns></returns>
+        ///         GetManyResult<TEntity> DeleteOne(Expression<Func<TEntity, bool>> filter);
+
+        GetOneResult<TEntity> DeleteOne(Expression<Func<TEntity, bool>> filter);
+        Task<GetOneResult<TEntity>> DeleteOneAsync(Expression<Func<TEntity, bool>> filter);
+        GetOneResult<TEntity> DeleteById(string id);
+        Task<GetManyResult<TEntity>> DeleteAsync(Expression<Func<TEntity, bool>> filter);
+        Task<GetOneResult<TEntity>> DeleteByIdAsync(string id);
+        void DeleteMany(Expression<Func<TEntity, bool>> filter);
+        Task DeleteManyAsync(Expression<Func<TEntity, bool>> filter);
 
     }
 }
