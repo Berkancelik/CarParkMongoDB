@@ -1,4 +1,6 @@
 using CarParkUser.Resources;
+using CoreLayer.Repository.Abstract;
+using DataAccessLayer.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -39,6 +41,10 @@ namespace CarParkUser
                         return factory.Create(nameof(SharedModelsResource), assamblyName.Name);
                     };
                 });
+
+
+            services.AddScoped(typeof(IRepository<>), typeof(MongoRepositoryBase<>));
+
             services.AddLocalization();
 
             services.AddLocalization(opts =>
