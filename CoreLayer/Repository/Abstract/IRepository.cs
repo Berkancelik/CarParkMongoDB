@@ -14,5 +14,7 @@ namespace CoreLayer.Repository.Abstract
         Task<GetManyResult<TEntity>> ASQueryableAsync();
         GetManyResult<TEntity> FilterBy(Expression<Func<TEntity, bool>> filter);
         Task<GetManyResult<TEntity>> FilterByAsync(Expression<Func<TEntity, bool>> filter);
+        GetOneResult<TEntity> GetById(string id);
+        Task<GetOneResult<TEntity>> GetByIdAsync(string id);
     }
 }

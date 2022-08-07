@@ -3,6 +3,7 @@ using CoreLayer.Repository.Abstract;
 using CoreLayer.Settings;
 using DataAccessLayer.Context;
 using Microsoft.Extensions.Options;
+using MongoDB.Bson;
 using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
@@ -108,6 +109,54 @@ namespace DataAccessLayer.Repository
                 result.Message = $"FilterBy {ex.Message}";
                 result.Success = false;
                 result.Result = null;
+            }
+            return result;
+        }
+
+        public GetOneResult<TEntity> GetById(string id)
+        {
+            var result = new GetOneResult<TEntity>();
+            try
+            {
+                var objectId = ObjectId.Parse(id);
+                var filter = Builders<TEntity>.Filter.Eq("_id", objectId);
+                var data = _collection.Find(filter).FirstOrDefault();
+                if (data != null)
+                    result.Entity = data;
+              
+         
+               
+            }
+            catch (Exception ex)
+            {
+
+                result.Message = $"AsQueryable {ex.Message}";
+                result.Success = false;
+                result.Entity = null;
+            }
+            return result;
+        }
+
+        public async Task<GetOneResult<TEntity>> GetByIdAsync(string id)
+        {
+            var result = new GetOneResult<TEntity>();
+            try
+            {
+                var objectId = ObjectId.Parse(id);
+                var filter = Builders<TEntity>.Filter.Eq("_id", objectId);
+                var data = await _collection.Find(filter).FirstOrDefaultAsync();
+                if (data != null)
+                    result.Entity = data;
+
+
+
+            }
+            catch (Exception ex)
+            {
+
+                result.Message = $"AsQueryable {ex.Message}";
+                result.Success = false;
+                result.Entity = null;
             }
             return result;
         }
